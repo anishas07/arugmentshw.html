@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>largest number in Argument Objects</p>
+    <p id="p1"></p>
+
+    <script>
+
+        function findMax() {
+            var max = arguments[0];  
+            for (var i = 1; i < arguments.length; i++) {  
+                if (arguments[i] > max) {
+                    max = arguments[i];  }
+            }
+            return max;  
+        }
+        document.getElementById("p1").innerHTML = findMax(1, 2, 3, 4, 5, 6, 7,8);
+
+//
+         function findMax1() {
+                var max1 = arguments[1];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > max1) {
+                        max1 = arguments[i];
+                    }
+                }
+                return max1;
+            }
+            document.getElementById("p1").innerHTML = findMax(1, 2, 3, 4);
+    </script>
+
+</body>
+
+</html>
